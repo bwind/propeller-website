@@ -13,10 +13,10 @@ urls = (
     (r'^/docs$', DocsHandler),
     (r'^/benchmarks$', BenchmarksHandler),
     (r'^/mailinglist$', MailingListHandler),
-    (r'^/static/(.*)$', StaticFileHandler, {'static_path': '/Users/baswind/Projects/propeller-website/static'}),
+    (r'^/static/(.*)$', StaticFileHandler, {'static_path': '/var/www/propellerframework.org/static'}),
 )
 
-settings = {'urls': urls, 'debug': True}
+settings = {'urls': urls}
 
 a = Application(**settings)
 a.run()
