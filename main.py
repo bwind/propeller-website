@@ -6,6 +6,9 @@ from handlers.docs import DocsHandler
 from handlers.benchmarks import BenchmarksHandler
 from handlers.mailinglist import MailingListHandler
 
+import os
+import sys
+
 
 urls = (
     (r'^/$', HomeHandler),
@@ -13,7 +16,7 @@ urls = (
     (r'^/docs$', DocsHandler),
     (r'^/benchmarks$', BenchmarksHandler),
     (r'^/mailinglist$', MailingListHandler),
-    (r'^/static/(.*)$', StaticFileHandler, {'static_path': '/var/www/propellerframework.org/static'}),
+    (r'^/static/(.*)$', StaticFileHandler, {'static_path': os.path.join(sys.path[0], 'static')}),
 )
 
 settings = {'urls': urls}
