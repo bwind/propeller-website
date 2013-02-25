@@ -14,7 +14,6 @@ import sys
 urls = (
     (r'^/$', HomeHandler),
     (r'^/downloads$', DownloadsHandler),
-    (r'^/docs(?:/(.*))?$', DocsHandler),
     (r'^/benchmarks$', BenchmarksHandler),
     (r'^/mailinglist$', MailingListHandler),
     (r'^/static/(.*)$', StaticFileHandler, {'static_path': os.path.join(sys.path[0], 'static')}),
