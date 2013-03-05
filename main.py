@@ -1,6 +1,5 @@
 from handlers.home import HomeHandler
 from handlers.downloads import DownloadsHandler
-from handlers.docs import DocsHandler
 from handlers.benchmarks import BenchmarksHandler
 from handlers.mailinglist import MailingListHandler
 from propeller.app import Application
