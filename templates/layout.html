@@ -15,33 +15,6 @@
     </style>
 <![endif]-->
     <script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['', 'req/s'],
-          ['Propeller',  11700],
-          ['Tornado',  9070],
-          ['Flask',  8660],
-          ['Django',  7030],
-          ['Propeller',  4000],
-          ['Tornado',  1170],
-          ['Flask',  660],
-          ['Django',  430],
-        ]);
-
-        var options = {
-          chartArea: {left: 80, top: 0, width: '700px', height: '325px'},
-          legend: {position: 'none'},
-          colors: ['#0bb1c7'],
-        };
-
-        var chart = new google.visualization.BarChart(document.getElementById('benchmark-chart'));
-        chart.draw(data, options);
-      }
-    </script>
 </head>
 
 <body onload="prettyPrint()">
@@ -59,7 +32,6 @@
             <li><a href="/">Home</a></li>
             <li><a href="/downloads">Downloads</a></li>
             <li><a href="/docs">Documentation</a></li>
-            <li><a href="/benchmarks">Benchmarks</a></li>
             <li><a href="/mailinglist">Mailing list</a></li>
         </ul>
     </div>
